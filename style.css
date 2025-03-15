@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    transition: all 0.3s ease;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #ff5500, #222222, #000000);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.calculator {
+    position: relative;
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    background-color: whitesmoke;
+    width: 320px;
+    text-align: center;
+}
+
+/* Theme Toggler */
+.theme-toggler {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    color: #ea866d;
+}
+
+.theme-toggler.active {
+    color: #0A1F44;
+}
+
+/* Display Screen */
+#display {
+    height: 80px;
+    width: 100%;
+    padding: 15px;
+    font-size: 2rem;
+    text-align: right;
+    background: #fff;
+    border-radius: 8px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+#display::-webkit-scrollbar {
+    display: none;
+}
+
+/* Buttons */
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    height: 60px;
+    width: 60px;
+    border: 0;
+    border-radius: 15px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+button#equal {
+    height: 65px;
+}
+
+
+/* Dark Theme */
+.calculator.dark {
+    background-color: #170b01;
+}
+
+.calculator.dark #display {
+    color: #f8fafd;
+    background-color: #222;
+}
+
+.calculator.dark button#clear {
+    background-color: #2d191e;
+    color: #bd3740;
+}
+
+.calculator.dark button.btn-number {
+    background-color: #1b2f38;
+    color: #f8fafd;
+}
+
+.calculator.dark button.btn-operator {
+    background-color: #2e1f39;
+    color: #aa00a4;
+}
+
+.calculator.dark button.btn-equal {
+    background-color: #223323;
+    color: #ffffff;
+}
+
+/* Light Theme */
+.calculator button#clear {
+    background-color: #ffd5d8;
+    color: #fc4552;
+}
+
+.calculator button.btn-number {
+    background-color: #c3eaff;
+    color: #000000;
+}
+
+.calculator button.btn-operator {
+    background-color: #ffd0fd;
+    color: #f967f3;
+}
+
+.calculator button.btn-equal {
+    background-color: #adf9e7;
+    color: #000000;
+}
